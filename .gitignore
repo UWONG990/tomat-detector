@@ -1,1 +1,6 @@
 data.zip
+
+# Python
+venv/
+__pycache__/
+*.pyc
