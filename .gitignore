@@ -1,6 +1,12 @@
 data.zip
 
-# Python
+# Dataset (too large)
+knn/dataset/tomato_data/
+
+# Python virtual environment
 venv/
+
+# Python cache
 __pycache__/
+**/__pycache__/
 *.pyc
