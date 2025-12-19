@@ -10,9 +10,7 @@ from ultralytics import YOLO
 # KNN utils
 from knn.knn_utils import load_model_knn, predict_knn
 
-# ===============================
-# --- Argparse ------------------
-# ===============================
+# Argparse 
 parser = argparse.ArgumentParser()
 parser.add_argument('--yolo_model', required=True)
 parser.add_argument('--source', required=True, help='File, folder, video, or camera (usb0, usb1)')
@@ -22,20 +20,14 @@ parser.add_argument('--resolution', default=None, help='WxH, misal 640x480')
 parser.add_argument('--record', action='store_true')
 args = parser.parse_args()
 
-# ===============================
-# --- Load YOLO -----------------
-# ===============================
+# Load YOLO
 yolo_model = YOLO(args.yolo_model, task='detect')
 labels = yolo_model.names
 
-# ===============================
-# --- Load KNN ------------------
-# ===============================
+# Load KNN 
 knn_model, knn_scaler = load_model_knn(args.knn_model)
 
-# ===============================
-# --- Setup source --------------
-# ===============================
+# Setup source 
 img_ext = ['.jpg','.jpeg','.png','.bmp']
 vid_ext = ['.mp4','.avi','.mov','.mkv']
 
@@ -75,9 +67,7 @@ else:
     print(f'Input {args.source} tidak valid.')
     sys.exit(0)
 
-# ===============================
-# --- Run YOLO + KNN ------------
-# ===============================
+# Run YOLO + KNN 
 img_count = 0
 while True:
     # Ambil frame
@@ -95,7 +85,6 @@ while True:
         if frame is None:
             break
 
-    # Resize jika diminta
     if resize:
         frame = cv2.resize(frame, (resW,resH))
 
