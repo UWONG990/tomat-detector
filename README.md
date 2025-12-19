@@ -6,7 +6,7 @@
 
 Gunakan dataset YOLO untuk training model deteksi.
 
-Link: https://drive.google.com/drive/folders/1RQSFlyxGrJLFjc3q6NY1vGeNbyPrLP7p?usp=sharing
+Link: https://drive.google.com/file/d/1RQSFlyxGrJLFjc3q6NY1vGeNbyPrLP7p/view?usp=drivesdk
 
 ### KNN (Klasifikasi)
 
